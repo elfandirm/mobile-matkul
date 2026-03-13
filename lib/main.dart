@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: .center,
           children: [
-            const Text('You have pushed the button this many times:'),
+            const Text('Program untuk menampilkan bilangan genap kelipatan 2 mulai dari 1 sampai n!'),
             Text(
               '$kelipatan2',
               style: Theme.of(context).textTheme.headlineMedium,
