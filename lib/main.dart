@@ -35,7 +35,10 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   "Surabaya Submarine Monument",
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.lobster(fontSize: 30, fontWeight: FontWeight.w500),
+                  style: GoogleFonts.lobster(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
               Container(
@@ -60,7 +63,32 @@ class DetailScreen extends StatelessWidget {
                   style: GoogleFonts.oxygen(fontSize: 16),
                 ),
               ),
-              
+              Container(
+                height: 150,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(4),
+                      child: Image.network(
+                        "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg",
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(4),
+                      child: Image.asset("assets/images/sub1.jpg"),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(4),
+                      child: Image.asset("assets/images/sub2.jpg"),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(4),
+                      child: Image.asset("assets/images/sub3.jpg"),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
