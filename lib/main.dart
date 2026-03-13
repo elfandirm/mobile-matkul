@@ -31,13 +31,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  int kelipatan2 = 0; 
+  String _text = "";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
-      if (_counter % 2 == 0) {
-        kelipatan2 = _counter;
+
+      _text = "Genap: ";
+      for (var i = 0; i <= _counter; i++) {
+        if (i % 2 == 0) {
+          _text += "${i}, ";
+        }
       }
     });
   }
@@ -53,11 +57,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: .center,
           children: [
-            const Text('Program untuk menampilkan bilangan genap kelipatan 2 mulai dari 1 sampai n!'),
+            const Text(
+              'Program untuk menampilkan bilangan text kelipatan 2 mulai dari 1 sampai n!',
+            ),
             Text(
-              '$kelipatan2',
+              '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text(_text),
           ],
         ),
       ),
@@ -69,5 +76,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
