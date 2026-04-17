@@ -38,7 +38,10 @@ Widget listItem(TourismPlace place) {
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(flex: 1, child: Image.asset(place.imageAsset)),
+        Expanded(
+          flex: 1,
+          child: Image.asset(place.imageAsset, fit: BoxFit.cover, height: 80),
+        ),
         Expanded(
           flex: 2,
           child: Padding(
