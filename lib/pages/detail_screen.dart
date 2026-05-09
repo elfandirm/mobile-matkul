@@ -46,14 +46,14 @@ class DetailScreen extends StatelessWidget {
                     Column(
                       children: [
                         Icon(Icons.calendar_today),
-                        Text("Open Everyday"),
+                        Text(place.openDay),
                       ],
                     ),
                     Column(
-                      children: [Icon(Icons.access_time), Text("08.00-16.00")],
+                      children: [Icon(Icons.access_time), Text(place.jamBuka)],
                     ),
                     Column(
-                      children: [Icon(Icons.attach_money), Text("Rp 5.000,-")],
+                      children: [Icon(Icons.attach_money), Text("Rp ${place.tiket}")],
                     ),
                   ],
                 ),
@@ -77,7 +77,7 @@ class DetailScreen extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadiusGeometry.circular(16),
                         child: Image.network(
-                          "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg",
+                          place.imageNetwork1,
                         ),
                       ),
                     ),
@@ -85,21 +85,21 @@ class DetailScreen extends StatelessWidget {
                       padding: EdgeInsets.all(4),
                       child: ClipRRect(
                         borderRadius: BorderRadiusGeometry.circular(16),
-                        child: Image.asset("assets/images/sub1.jpg"),
+                        child: Image.network(place.imageNetwork2),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(4),
                       child: ClipRRect(
                         borderRadius: BorderRadiusGeometry.circular(16),
-                        child: Image.asset("assets/images/sub2.jpg"),
+                        child: Image.network(place.imageNetwork3),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(4),
                       child: ClipRRect(
                         borderRadius: BorderRadiusGeometry.circular(16),
-                        child: Image.asset("assets/images/sub3.jpg"),
+                        child: Image.network(place.imageNetwork4),
                       ),
                     ),
                   ],
